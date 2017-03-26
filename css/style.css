@@ -33,7 +33,7 @@ z-index: 1;
 position: relative;
 }
 .center { margin: 0 auto; }
-.content{ margin: 0 auto; width: 960px; }
+.content{ margin: 0 auto; width: auto; }
 .clear { clear: both; }
 
 a {
@@ -109,11 +109,10 @@ margin: 50px auto;
 .quotes_container { width: 800px; margin: 0 auto; }
 #slide1, #slide2{ width: 100%; }
 #slide1{
-background:url('../img/slide1.jpg') 50% 0 no-repeat fixed;
 color: #fff;
-height: 300px;
+height: 700px;
 margin: 0;
-padding: 200px 0 260px 0;
+padding: 80px 0 260px 0;
 background-size: cover;
 }
 #slide2{

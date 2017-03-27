@@ -1,8 +1,9 @@
+html, body {height:100%;}
+
 body{
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 100%;
 }
 h1 {
 	font-family:"Raleway";
@@ -66,7 +67,7 @@ header {
 	float: left;
 	width: 200px;
 	height: 40px;
-	background: url(../img/logo.png) no-repeat center;
+	background: url(../img/clean_air_logo.png) no-repeat center;
 	display: block;
 }
 
@@ -108,28 +109,29 @@ margin: 50px auto;
 
 .quotes_container { width: 800px; margin: 0 auto; }
 
-#slide1, #slide2{ width: 100%; }
-
 #iframe{
 	width:100%;
 	height:100%;
 }
 
-#slide1{
-	color: #fff;
-	height: 700px;
-	margin: 0;
-	padding: 80px 0 260px 0;
-	background-size: cover;
+
+#slide1 {
+  position:relative;
+  top:0;
+  left:0;
+  height:100vh;
+  width:100%;;
 }
 
+/*Should it be fluid? */
 #slide2{
-background-color: #fff;
-color: #333333;
-height: 300px;
-margin: 0 auto;
-overflow: hidden;
-padding: 200px 0;
+	width: 100%;
+	background-color: #fff;
+	color: #333333;
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 200px 0;
 }
 
 #foot{

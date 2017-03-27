@@ -58,16 +58,20 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-	border-bottom: 4px solid #4C9CF1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid #4C9CF1;
 	z-index: 100;
 }
 
 #logo{
-	margin: 20px;
+	margin-top: 8px;
+    margin-left: 40px;
 	float: left;
 	width: 200px;
-	height: 40px;
-	background: url(../img/clean_air_logo.png) no-repeat center;
+	height: 60px;
+	background-image: url(../img/fresh_air_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 	display: block;
 }
 
@@ -146,7 +150,9 @@ margin: 50px auto;
 }
 
 .site-footer {
-  background: #999;
+  background: #fff;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  border-top: 2px solid #4C9CF1;
 }
 
 /* Condense the navigation menu and turn off paralaxing if needed. */

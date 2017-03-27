@@ -6,34 +6,13 @@
     <title>Fresh Air Bristol</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
-    <link rel="icon" type="image/png" href="../img/fresh_air_logo_icon.png">
-    <script>
-    var airQuality;
-
-    var url = "https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json";
-
-    function setup() {
-        loadJSON(url, gotData);
-    }
-
-    function gotData(data) {
-        println(data);
-        console.log(airQuality.avg_no2);
-        var airQuality = data;
-    }
-
-    function draw() {
-        if (airQuality) {
-            console.log(airQuality.avg_no2);
-        }
-    }
-    </script>
+    <link rel="icon" type="image/png" href="../img/fresh_air_logo_icon.png"/>
 </head>
 
 <body>
+
   <header>
 		<a href="#" id="logo"></a>
-        <!-- <div href="#" id="title">here</div> -->
 		<nav>
 			<a href="#" id="menu-icon"></a>
 			<ul>
@@ -48,6 +27,7 @@
         src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDK3nKGDbjwh5CeQ2x23z4qUS47qoDuQ7w&amp;center=51.454884,-2.592751&amp;zoom=14">
     </iframe>
 </div>
+
 <div id="slide2">
     <div class="content" >
         <div class="quotes_container">
@@ -57,7 +37,7 @@
 </div>
 
 <footer class="site-footer">
-  <div id="foot"> &#169; Seth and Rob's website</div>
+    <div id="foot"> &#169; Seth and Rob's website</div>
 </footer>
 
 </body>

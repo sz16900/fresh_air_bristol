@@ -19,7 +19,30 @@ function resetMap() {
         center: centerPos,
         zoom: 14
     });
-}*/
+}
+
+<script>
+var airQuality;
+
+var url = "https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json";
+
+function setup() {
+    loadJSON(url, gotData);
+}
+
+function gotData(data) {
+    println(data);
+    console.log(airQuality.avg_no2);
+    var airQuality = data;
+}
+
+function draw() {
+    if (airQuality) {
+        console.log(airQuality.avg_no2);
+    }
+}
+</script>
+*/
 var airQuality;
 
 var url = "https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json";

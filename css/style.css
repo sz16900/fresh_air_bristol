@@ -59,7 +59,7 @@ header {
 	top: 0;
 	left: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	border-bottom: 2px solid #4C9CF1;
+	border-bottom: 1px solid #4C9CF1;
 	z-index: 100;
 }
 
@@ -152,7 +152,7 @@ margin: 50px auto;
 .site-footer {
   background: #fff;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  border-top: 2px solid #4C9CF1;
+  border-top: 1px solid #4C9CF1;
 }
 
 /* Condense the navigation menu and turn off paralaxing if needed. */

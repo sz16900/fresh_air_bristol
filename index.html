@@ -6,11 +6,33 @@
     <title>Fresh Air Bristol</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
+    <script>
+    var airQuality;
+
+    var url = "https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json";
+
+    function setup() {
+        loadJSON(url, gotData);
+    }
+
+    function gotData(data) {
+        println(data);
+        console.log(airQuality.avg_no2);
+        var airQuality = data;
+    }
+
+    function draw() {
+        if (airQuality) {
+            console.log(airQuality.avg_no2);
+        }
+    }
+    </script>
 </head>
 
 <body>
   <header>
 		<a href="#" id="logo"></a>
+        <!-- <div href="#" id="title">here</div> -->
 		<nav>
 			<a href="#" id="menu-icon"></a>
 			<ul>

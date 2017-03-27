@@ -1,4 +1,4 @@
-// Resets google map to center over Bristol.
+/*// Resets google map to center over Bristol.
 function resetMap() {
     // Gets location of map in HTML.
     var mapDiv = document.getElementById("slide1");
@@ -8,7 +8,7 @@ function resetMap() {
           zoom: 14,
           center: new google.maps.LatLng(251.454884, -2.592751)
         });
-/*
+
     // Sets new Lat and Long position.
     var centerPos = new google.maps.LatLng("51.454884", "-2.592751");
     // Creates new map object.
@@ -18,5 +18,22 @@ function resetMap() {
     map.setOptions({
         center: centerPos,
         zoom: 14
-    });*/
+    });
+}*/
+var airQuality;
+
+var url = "https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json";
+
+function setup() {
+    loadJSON(url, gotData);
+}
+
+function gotData(data) {
+    var airQuality = data;
+}
+
+function draw() {
+    if (airQuality) {
+        console.log(airQuality.avg_no2);
+    }
 }

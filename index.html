@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/png" href="../img/fresh_air_logo_icon.png"/>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK3nKGDbjwh5CeQ2x23z4qUS47qoDuQ7w&amp;callback=initMap">
+    </script>
 </head>
 
 <body>
@@ -16,19 +19,15 @@
 		<nav>
 			<a href="#" id="menu-icon"></a>
 			<ul>
-				<li><a href="#slide1" class="current">Map</a></li>
-				<li><a href="#slide2">Data</a></li>
+				<li><a href="#">Map</a></li>
+				<li><a href="#data">Data</a></li>
 			</ul>
 		</nav>
 	</header>
 
-<div id="slide1">
-    <iframe id="iframe"
-        src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDK3nKGDbjwh5CeQ2x23z4qUS47qoDuQ7w&amp;center=51.454884,-2.592751&amp;zoom=14">
-    </iframe>
-</div>
+<div id="map"></div>
 
-<div id="slide2">
+<div id="data">
     <div class="content" >
         <div class="quotes_container">
             <h3 class="quotes">“This is where we add content for a pie chart. Perhaps some form of databases.”</h3>

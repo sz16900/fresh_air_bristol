@@ -1,3 +1,37 @@
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: new google.maps.LatLng(51.454884,-2.592751),
+    // mapTypeId: 'terrain'
+  });
+
+  // Create a <script> tag and set the USGS URL as the source.
+  var script = document.createElement('script');
+  // This example uses a local copy of the GeoJSON stored at
+  // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+  script.src = 'https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json';
+  document.getElementsByTagName('head')[0].appendChild(script);
+  console.log(script);
+}
+
+// Need to append json file with an eqfeed_callback for function below??
+// Loop through the results array and place a marker for each
+// set of coordinates.
+window.eqfeed_callback = function(results) {
+  for (var i = 0; i < results.features.length; i++) {
+    var coords = results.features[i].geometry.coordinates;
+    var latLng = new google.maps.LatLng(coords[1],coords[0]);
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: map
+    });
+  }
+};
+
+
+
+
 /*// Resets google map to center over Bristol.
 function resetMap() {
     // Gets location of map in HTML.
@@ -42,7 +76,7 @@ function draw() {
     }
 }
 </script>
-*/
+
 var airQuality;
 
 var url = "https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json";
@@ -60,3 +94,4 @@ function draw() {
         console.log(airQuality.avg_no2);
     }
 }
+*/

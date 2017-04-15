@@ -13,16 +13,23 @@ $(window).on('load', function() {
         center: center
     }
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
 
     // Retrieve our data and plot it
     $.getJSON(url, function(data, textstatus) {
+        var heatmapData = [];
         $.each(data, function(i, entry) {
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(entry.location.coordinates[1],
-                                                 entry.location.coordinates[0]),
-                map: map,
-                title: location.monitor_description
-            });
+            var dataItem = {
+                location: new google.maps.LatLng(entry.location.coordinates[1],
+                entry.location.coordinates[0]), weight: entry.avg_no2
+            };
+            heatmapData.push(dataItem);
+        });
+        var heatmap = new google.maps.visualization.HeatmapLayer({
+            data: heatmapData,
+            dissipating: false,
+            map: map
         });
     });
 });

@@ -6,11 +6,11 @@ body{
 	width: 100%;
 }
 h1 {
-	font-family:"Raleway";
+	font-family:"Pacifico";
 	font-weight:normal;
-	font-size: 55px;
+	font-size: 45px;
 	text-align: center;
-	color: #fff;
+	color: #4C9CF1;
 	margin: 0;
 	padding: 0;
 }
@@ -63,16 +63,22 @@ header {
 	z-index: 100;
 }
 
-#logo{
+#logo {
 	margin-top: 8px;
     margin-left: 40px;
 	float: left;
-	width: 200px;
+	width: 60px;
 	height: 60px;
 	background-image: url(../img/fresh_air_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
 	display: block;
+}
+
+#title {
+	height: 60px;
+	display: block;
+	float: left;
 }
 
 nav {

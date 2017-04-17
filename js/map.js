@@ -1,9 +1,10 @@
 // Javascript will contain functions for querying the json data file.
 // Bristol council API app token: xZKWYI0zglZQ5dj95RiYGzsHu
+"use strict";
 
 $(window).on('load', function() {
     // Construct the query string
-    url = 'https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json?'
+    var url = 'https://opendata.bristol.gov.uk/resource/mc7c-bzcy.json?'
         + '$$app_token=xZKWYI0zglZQ5dj95RiYGzsHu';
 
     // Intialize our map
@@ -22,7 +23,8 @@ $(window).on('load', function() {
         $.each(data, function(i, entry) {
             var dataItem = {
                 location: new google.maps.LatLng(entry.location.coordinates[1],
-                entry.location.coordinates[0]), weight: entry.avg_no2
+                                                 entry.location.coordinates[0]),
+                weight: entry.avg_no2
             };
             heatmapData.push(dataItem);
         });
